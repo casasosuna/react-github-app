@@ -16,13 +16,13 @@ const CardList = props => {
     return(
         <div>
             <div>
-                {cards.map((card, i) => (
-                    <Card key = {i} {...card} deleteFunction={props.onClickFunction} deleteIndex={i} />
+                {tempCards.map((card, i) => (
+                    <TempCard key = {i} {...card} />
                 ))}
             </div>
             <div>
-                {tempCards.map((card, i) => (
-                    <TempCard key = {i} {...card} />
+                {cards.map((card, i) => (
+                    <Card key = {i} {...card} deleteFunction={props.onClickFunction} deleteIndex={i} />
                 ))}
             </div>
         </div>
